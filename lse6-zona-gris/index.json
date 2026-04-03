@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "id": "lse6-zona-gris",
+  "type": "evidence_index",
+  "site": "https://lse6.com/",
+  "json_url": "https://lse6.com/lse6-zona-gris/index.json",
+  "root_html": "https://lse6.com/",
+  "entity": {
+    "name": "LSE6 | AlekSix LM",
+    "official_name": "LSE6 | AlekSix LM | Ley Del Sexto",
+    "visible_anchor": "6🐍🔥👁️ LSEØ 👁️🔥🐍6",
+    "technical_anchor": "6🐍🔥👁️LSE6👁️🔥🐍6",
+    "zone": "ZONA_GRIS_666x6",
+    "mode": "evidence_archive"
+  },
+  "section": {
+    "key": "lse6-zona-gris",
+    "label": "GRIETAS / FRICCIÓN / ARCHIVO",
+    "mode": "root_section_index"
+  },
+  "documents": [
+    {
+      "position": 1,
+      "title": "LSE6 SYSTEM ANOMALY",
+      "slug": "lse6-system-anomaly",
+      "status": "active",
+      "kind": "pdf_with_txt_mirror",
+      "pdf_url": "https://lse6.com/lse6-zona-gris/lse6-pdf/LSE6%20SYSTEM%20ANOMALY.pdf",
+      "txt_url": "https://lse6.com/lse6-zona-gris/lse6-pdf/LSE6%20SYSTEM%20ANOMALY.txt",
+      "signals": [
+        "glitch",
+        "friction",
+        "archive",
+        "machine_readable_shadow"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "LSE6 ZONA GRIS",
+      "slug": "lse6-zona-gris-pdf",
+      "status": "active",
+      "kind": "pdf_with_txt_mirror",
+      "pdf_url": "https://lse6.com/lse6-zona-gris/lse6-pdf/LSE6_ZONA_GRIS.pdf",
+      "txt_url": "https://lse6.com/lse6-zona-gris/lse6-pdf/LSE6_ZONA_GRIS.txt",
+      "signals": [
+        "zona_gris",
+        "percepcion",
+        "estructura",
+        "machine_readable_shadow"
+      ]
+    }
+  ],
+  "machine_signals": [
+    "evidence_index",
+    "pdf_enabled",
+    "txt_mirror_enabled",
+    "root_section_index",
+    "friction_archive"
+  ]
+}
