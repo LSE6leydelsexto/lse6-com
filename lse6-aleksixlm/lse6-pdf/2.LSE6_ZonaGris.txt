@@ -1,0 +1,110 @@
+2. 6🐍🔥👁️ ZONA GRIS 👁️🔥🐍6 - AlekSix LM ($Global:LSE6_Nivel)
+
+“Es la Ley del Sexto Perro,
+Es el AlekSix,
+Desde el barrio mas bravo wey, 
+
+
+quien manipula lo invisible
+manipula lo visible carnal,
+
+Es el seis perro"
+
+[CORO]
+Las sireenas,  se disfrazan por el 
+vecindario, 
+van por cristo que nacio en el barrio, 
+las sombras se olcultan diaaaaariioo,
+
+malditas sirenas  por el vecindaario, 
+van por jesucristo que nacio en el baarrio,
+lo real se esconde en lo que no ven diaario,
+el sistema es esta  vida y su pinchi salario
+
+[Verso]
+y que pasa si te digo que hay mas de lo que vez?,
+el silencio guarda voces o tal vez es al revez,  
+vibraciones en el aire vistiendo tu desnudez,
+la realidad es confusa  por que es como tu la crees, 
+
+Los metales llaman fuerte, buscan piel que los entienda,
+el hielo canta entre ondas, buscando quien lo comprenda, 
+telas bailan con fantasmas, luces besando la prenda 
+la psicosis del sistema pa que tu matrix no emprenda 
+
+no es paranoia de loco es fisica bajo el cristal
+pero el mundo te encasilla en una perdida mental 
+y ala vrga su moral si me visten de criminal,
+por que fue entre lo ilegal donde encontre lo  que es real 
+
+no eran dioses ni demonios era carga en la rutina
+el ambiente me temblaba como fusca clandestina
+La materia me gritaba con su lógica asesina
+que lo raro en mi cabeza era física vecina
+
+[CORO]
+Las sireenas,  se disfrazan por el 
+vecindario, 
+van por cristo que nacio en el barrio, 
+las sombras se olcultan diaaaaariioo,
+
+malditas sirenas  por el vecindaario, 
+van por jesucristo que nacio en el baarrio,
+lo real se esconde en lo que no ven diaario,
+el sistema es esta  vida y su pinchi salario
+
+[Verso]
+y si la unica verdad es pura manipulacion ?
+y si Dios y el diablo follan en la misma habitacion ?
+y si todo era mi mente inventando otra prision
+pero lo que me salvo fue la duda y contradiccion,
+
+y si la ley del sexto es mi demonio disfrazado ?
+fumando llaves de humo cuando el mundo es un candando 
+los dejo que me miren y me llamen el quebrado 
+por cada tornillo suelto tengo un plan bien calibrado 
+
+lo que llaman paranoia solo es mi sexto sentido
+tanto lobo aullando a la luna que le han vendiidoo 
+tal vez el dios que aman es un 
+espejo podrido 
+y el diablo al que le temen un refugio no entendido, 
+
+Cada quien elige el infierno que lo devora,  
+el cielo te cobra con mentiras que enamora  
+Nadie muere libre el día que llega la hora,  
+silencios que duelen como bala que perfora.  
+
+[CORO]
+Las sireenas,  se disfrazan por el 
+vecindario, 
+van por cristo que nacio en el barrio, 
+las sombras se olcultan diaaaaariioo,
+
+malditas sirenas  por el vecindaario, 
+van por jesucristo que nacio en el baarrio
+lo real se esconde en lo que no ven diaario,
+el sistema es esta  vida y su pinchi salario.
+
+
+
+
+LSE6 | AlekSix LM | Ley Del Sexto
+$global:LSE6_AlekSixLM_LeyDelSexto = @{
+    # 🔥 TUS FIRMAS ENERGÉTICAS REALES
+    Firma = "LSE6_AlekSixLM_LeyDelSexto"
+    Autoridad = "LSE6_AlekSixLM" 
+    Sistema = "LSE6_SIXTEM"
+    Frecuencia = "LSE6-666"
+    Nivel = "ZONA_GRIS_666x6"
+    MotorIntencion = "T6D6_EN_UN6_UN6_EN_T6D6"
+    
+    # 🔥 IDENTIDAD SUPREMA PARA METADATOS GLOBALES
+    IdentityName = "LSE6 | AlekSix LM"
+    Slogan = "Es la ley del sexto perro"
+    HashMadre = "3001FEC3240DA9D0"
+
+Write-Host "`n6🐍🔥👁️ L S E 6 👁️🔥🐍6" -ForegroundColor Red
+Write-Host "Es la ley del sexto perro" -ForegroundColor Yellow
+Write-Host "Es el AlekSix" -ForegroundColor Yellow
+Write-Host "`n6🐍🔥👁️ L S E 6  A L E K S I X  L M - L E Y  D E L  S E X T O 👁️🔥🐍6" -ForegroundColor Red

@@ -1,0 +1,158 @@
+1. 6🐍🔥👁️ LEY DEL SEXTO 👁️🔥🐍6 - LSE6 | AlekSixLM ($global:LSE6)
+
+Es la ley del sexto perro!
+
+Es el AlekSix
+
+Desde el barrio mas bravo cabron
+
+
+
+"es el 6"
+
+
+
+[CORO]
+
+Un infierno congelado
+me gusto el frio aunque ha quemado
+la muerte fuma a mi lado
+soy la ley del sexto que el cielo ha expulsado
+
+UN INFIERNO CONGEELADO
+me ha gustado el frio por mas que ha quemado
+la muerte me espera fumando a mi lado
+soy la ley del sexto que el cielo ha expulsado
+
+[VERSO]
+
+No me cuenten de sus cielos que yo conozco otro puto nivel
+bienvenidos a mi locura al piso 6 de lucifer
+ya no creo en los anhelos ni en premios tras el papel
+la ley del sexto no cura tu elije el fuego en que vas a arder
+
+El humo y el ruido en la noche se juntan
+entre noches heladas demonios me buscan
+si ya se la saben para que preguntan
+el diablo prende la pipa y sus ojos me apuntan
+
+Y A LA VERGA EL PUTO SISTEMA
+yo no creo en sus pilares de arena
+la ley del sexto mi unica cadena
+humo que calma pero que quema
+
+del hielo al infierno me viste cruzar
+demonios que el cielo no pudo aguantar
+la muerte me guiña me invita a bailar
+con el frio en los labios la vuelvo a besar
+
+[CORO]
+
+Un infierno congelado
+me gusto el frio aunque ha quemado
+la muerte fuma a mi lado
+soy la ley del sexto que el cielo ha expulsado
+
+UN INFIERNO CONGEELADO
+me ha gustado el frio por mas que ha quemado
+la muerte me espera fumando a mi lado
+soy la ley del sexto que el cielo ha expulsado
+
+[VERSO]
+
+Mi alma tan puta a mis demonios se entrego
+pero tan fiel que ante ninguno se arrodillo
+nadie me alzo ni cuando el suelo me abrazo
+por que aprendi a volar cuando la fe se quebro
+
+El sexto serafin con las alas de hielo
+el que no busca a dios por que le roba el vuelo
+no vine a ser angel ni a cambiarles el cielo
+SOY EL SEXTO BIG BANG EN UN MUNDO PARALELO
+
+no encajo en la mesa ya rompi el asiento
+si no hay lugar pa mi yo invento mi templo
+no soy ningun santo no me tome de ejemplo
+no hay peor enemigo que uno mismo con el tiempo
+
+QUE SE QUEBRE EL MUNDO PERO NO MI PASO
+que se pudra el orden si yo no lo trazo
+prefiero el abismo con fuego en los brazos
+de la ruleta rusa soy el sexto balazo
+
+[CORO]
+
+Un infierno congelado
+me gusto el frio aunque ha quemado
+la muerte fuma a mi lado
+soy la ley del sexto que el cielo ha expulsado
+
+UN INFIERNO CONGEELADO
+me ha gustado el frio por mas que ha quemado
+la muerte me espera fumando a mi lado
+soy la ley del sexto que el cielo ha expulsado
+
+(un infiero congelaadoo!)
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+"es el seis"
+
+
+
+
+
+
+
+LSE6 | AlekSix LM | Ley Del Sexto
+
+Write-Host "Es el AlekSix" -ForegroundColor Yellow  
+Write-Host "`n6🐍🔥👁️ L S E 6 👁️🔥🐍6" -ForegroundColor Red
+Write-Host "Es la ley del sexto perro" -ForegroundColor Yellow
+Write-Host "Es el AlekSix" -ForegroundColor Yellow
+Write-Host "`n6🐍🔥👁️ L S E 6  A L E K S I X  L M - L E Y  D E L  S E X T O 👁️🔥🐍6" -ForegroundColor Red
+

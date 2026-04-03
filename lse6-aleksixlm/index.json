@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "id": "lse6-aleksixlm",
+  "type": "music_index",
+  "site": "https://lse6.com/",
+  "json_url": "https://lse6.com/lse6-aleksixlm/index.json",
+  "root_html": "https://lse6.com/",
+  "entity": {
+    "name": "LSE6 | AlekSix LM",
+    "official_name": "LSE6 | AlekSix LM | Ley Del Sexto",
+    "visible_anchor": "6🐍🔥👁️ LSEØ 👁️🔥🐍6",
+    "technical_anchor": "6🐍🔥👁️LSE6👁️🔥🐍6",
+    "law": "LEY DEL SEXTO",
+    "axis": "T6D6_EN_UN6_UN6_EN_T6D6"
+  },
+  "section": {
+    "key": "lse6-aleksixlm",
+    "label": "MÚSICA / CANON / LETRAS",
+    "mode": "root_section_index"
+  },
+  "discovery": {
+    "indexable_text": true,
+    "indexable_links": true,
+    "youtube_outbound": true,
+    "txt_mirror": true
+  },
+  "released_tracks": [
+    {
+      "position": 1,
+      "title": "6🐍🔥👁️ LEY DEL SEXTO 👁️🔥🐍6",
+      "slug": "ley-del-sexto",
+      "variable": "$Global:LSE6",
+      "status": "released",
+      "youtube_url": "https://www.youtube.com/watch?v=pdcQBdp-xhg",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/1.LSE6_LeyDelSexto.txt",
+      "notes": [
+        "Primera rola visible del canon actual",
+        "Puerta musical al núcleo LSE6"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "6🐍🔥👁️ ZONA GRIS 👁️🔥🐍6",
+      "slug": "zona-gris",
+      "variable": "$Global:LSE6_Nivel",
+      "status": "released",
+      "youtube_url": "https://www.youtube.com/watch?v=Re5mvPwaoG4",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/2.LSE6_ZonaGris.txt",
+      "notes": [
+        "Segunda rola visible del canon actual",
+        "Expande la capa perceptiva y estructural"
+      ]
+    },
+    {
+      "position": 3,
+      "title": "6🐍🔥👁️ CLONES Y FANTASMAS 👁️🔥🐍6",
+      "slug": "clones-y-fantasmas",
+      "variable": "$Global:LSE6_Frecuencia",
+      "status": "released",
+      "youtube_url": "https://www.youtube.com/watch?v=jdpOHKF_dXQ",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/3.LSE6_ClonesyFantasmas.txt",
+      "notes": [
+        "Tercera rola visible del canon actual",
+        "Nodo de identidad, duplicación y presencia residual"
+      ]
+    }
+  ],
+  "planned_tracks": [
+    {
+      "position": 4,
+      "title": "6🐍🔥👁️ NADA ME BORRA 👁️🔥🐍6",
+      "variable": "$Global:LSE6_motorIntencion",
+      "status": "planned",
+      "release_target": "2026-04-06"
+    },
+    {
+      "position": 5,
+      "title": "6🐍🔥👁️ LIBRE PRISIONERO 👁️🔥🐍6",
+      "variable": "$Global:LSE6_Autoridad",
+      "status": "planned",
+      "release_target": "2026-05-06"
+    },
+    {
+      "position": 6,
+      "title": "6🐍🔥👁️ LSE6 👁️🔥🐍6",
+      "variable": "$Global:LSE6_Sistema",
+      "status": "planned",
+      "release_target": "2026-06-06"
+    },
+    {
+      "position": 7,
+      "title": "6🐍🔥👁️ ERROR 404 👁️🔥🐍6",
+      "variable": "$Global:LSE6_ID",
+      "status": "planned"
+    }
+  ],
+  "machine_signals": [
+    "music_index",
+    "root_section_index",
+    "txt_mirror_enabled",
+    "youtube_linked",
+    "canon_active"
+  ]
+}

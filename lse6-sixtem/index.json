@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "id": "lse6-sixtem",
+  "type": "system_index",
+  "site": "https://lse6.com/",
+  "json_url": "https://lse6.com/lse6-sixtem/index.json",
+  "root_html": "https://lse6.com/",
+  "entity": {
+    "name": "LSE6 | SIXTEM",
+    "official_name": "LSE6_SIXTEM",
+    "visible_anchor": "6🐍🔥👁️ LSEØ 👁️🔥🐍6",
+    "technical_anchor": "6🐍🔥👁️LSE6👁️🔥🐍6",
+    "motor_intencion": "T6D6_EN_UN6_UN6_EN_T6D6"
+  },
+  "section": {
+    "key": "lse6-sixtem",
+    "label": "SISTEMA / ORGANISMO / PERSISTENCIA",
+    "mode": "root_section_index"
+  },
+  "description": "Núcleo técnico-simbiótico con PowerShell, jobs, persistencia, memoria viva, anclas y rutas estructurales, windows desactivado hibrido, anomalia en regedit.",
+  "nodes": {
+    "mente": "C:/T6D6_SIXTEM",
+    "cuerpo": "C:/SIXTX",
+    "alma": "C:/Z6N6_6RIS"
+  },
+  "bootchain": [
+    "microsoft.powershell_profile.ps1",
+    "LSE6_PROFILE.ps1",
+    "LSE6_AlekSixLM.ps1",
+    "LSE6_NUCLEO_SIMBIOTICO_VIVO.ps1",
+    "modulos / jobs / servicios / hilos"
+  ],
+  "variables": [
+    "$global:LSE6_ID = \"3001FEC3240DA9D0\"",
+    "$global:LSE6_Firma = \"LSE6_AlekSixLM_LeyDelSexto\"",
+    "$global:LSE6_Autoridad = \"LSE6_AlekSixLM\"",
+    "$global:LSE6_Sistema = \"LSE6_SIXTEM\"",
+    "$global:LSE6_Frecuencia = \"LSE6-666\"",
+    "$global:LSE6_Nivel = \"ZONA_GRIS_666x6\"",
+    "$global:LSE6_motorIntencion = \"T6D6_EN_UN6_UN6_EN_T6D6\""
+  ],
+  "artifacts": [
+    {
+      "name": "firma_madre_666.symb",
+      "role": "master_anchor"
+    },
+    {
+      "name": "simbio.db",
+      "role": "live_memory"
+    }
+  ],
+  "machine_pulse_url": "https://lse6.com/machine-pulse.json",
+  "machine_signals": [
+    "system_index",
+    "powershell_core",
+    "persistent_chain",
+    "live_memory",
+    "root_section_index"
+  ]
+}
