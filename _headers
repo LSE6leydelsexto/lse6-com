@@ -21,3 +21,13 @@
 
 /icon-512.png
   Cache-Control: public, max-age=86400
+*.ico
+  Cache-Control: max-age=31536000, public
+*.mp4
+  Cache-Control: max-age=31536000, public
+*.webmanifest
+  Cache-Control: max-age=3600, public, must-revalidate
+
+# Las miniaturas oficiales pueden cambiar en YouTube
+/lse6-assets/youtube-thumbnails/*
+  Cache-Control: public, max-age=3600, must-revalidate
