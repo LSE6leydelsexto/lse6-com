@@ -14,11 +14,15 @@ TRACKS = [
 ]
 errors = []
 index = (ROOT / "index.html").read_text(encoding="utf-8-sig")
+redirects = (ROOT / "_redirects").read_text(encoding="utf-8-sig")
 if "https://lse6.org/" not in index or "LSEØ_ARCHIVO" not in index:
     errors.append("Missing visible LSE6.ORG link")
 
 for slug, video_id in TRACKS:
     route_url = f"https://lse6.com/{slug}/"
+    direct = f"/{slug}/ https://youtube.com/watch?v={video_id} 302"
+    if direct not in redirects:
+        errors.append(f"Missing direct YouTube redirect: {slug}")
     if f'href="/{slug}/"' not in index:
         errors.append(f"Missing homepage link: {slug}")
     if f"lse6.com/{slug}" not in index:
@@ -28,10 +32,13 @@ for slug, video_id in TRACKS:
         errors.append(f"Missing route file: {slug}")
         continue
     page = route.read_text(encoding="utf-8-sig")
-    required = [route_url, video_id, "ABRIR EN LA APP DE YOUTUBE", "androidIntent", "youtube://", "https://youtu.be/"]
+    required = [route_url, video_id, "ABRIR EN LA APP DE YOUTUBE", "androidIntent", "youtube://watch?v=", "https://youtube.com/watch?v="]
     for token in required:
         if token not in page:
             errors.append(f"{slug}: missing {token}")
+    for forbidden in ("https://youtu.be/", "https://www.youtube.com/watch", "youtube://www.youtube.com/watch", "intent://www.youtube.com/watch"):
+        if forbidden in page:
+            errors.append(f"{slug}: forbidden redirect target {forbidden}")
     thumb = ROOT / "lse6-assets" / "youtube-thumbnails" / f"{video_id}.jpg"
     if not thumb.exists() or thumb.stat().st_size < 10000:
         errors.append(f"Invalid thumbnail: {video_id}")

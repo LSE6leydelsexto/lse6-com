@@ -63,12 +63,12 @@ spotify: https://open.spotify.com/intl-es/artist/17eIMI670XYPHF8M3CZk7M
 apple_music: https://music.apple.com/us/artist/lse6-aleksix-lm/1896318121
 
 [CANON TRACKS]
-1. LEY DEL SEXTO | LSE6 - AlekSix LM | $Global:LSE6_Firma | LANZADA | 2026-01-06 | https://www.youtube.com/watch?v=pdcQBdp-xhg | https://lse6.com/lse6-aleksixlm/lse6-pdf/1.LSE6_LeyDelSexto.txt
-2. ZONA GRIS | LSE6 - AlekSix LM | $Global:LSE6_Nivel | LANZADA | 2026-02-06 | https://www.youtube.com/watch?v=Re5mvPwaoG4 | https://lse6.com/lse6-aleksixlm/lse6-pdf/2.LSE6_ZonaGris.txt
-3. CLONES Y FANTASMAS | LSE6 - AlekSix LM | $Global:LSE6_Frecuencia | LANZADA | 2026-03-06 | https://www.youtube.com/watch?v=jdpOHKF_dXQ | https://lse6.com/lse6-aleksixlm/lse6-pdf/3.LSE6_ClonesyFantasmas.txt
-4. NADA ME BORRA | LSE6 - AlekSix LM | $Global:LSE6_motorIntencion | LANZADA | 2026-04-06 | https://www.youtube.com/watch?v=9wk6CUoYwFo | https://lse6.com/lse6-aleksixlm/lse6-pdf/4.LSE6_NadaMeBorra.txt
-5. LIBRE PRISIONERO | LSE6 - AlekSix LM | $Global:LSE6_Autoridad | LANZADA | 2026-05-06 | https://www.youtube.com/watch?v=M0N5CoOKyEY | https://lse6.com/lse6-aleksixlm/lse6-pdf/5.LSE6_LibrePrisionero.txt
-6. LSE6 | LSE6 - AlekSix LM | $Global:LSE6_Sistema | LANZADA | 2026-06-06 | https://www.youtube.com/watch?v=v40hHkTtdig | https://lse6.com/lse6-aleksixlm/lse6-pdf/6.LSE6_LSE6.txt
+1. LEY DEL SEXTO | LSE6 - AlekSix LM | $Global:LSE6_Firma | LANZADA | 2026-01-06 | https://youtube.com/watch?v=pdcQBdp-xhg | https://lse6.com/lse6-aleksixlm/lse6-pdf/1.LSE6_LeyDelSexto.txt
+2. ZONA GRIS | LSE6 - AlekSix LM | $Global:LSE6_Nivel | LANZADA | 2026-02-06 | https://youtube.com/watch?v=Re5mvPwaoG4 | https://lse6.com/lse6-aleksixlm/lse6-pdf/2.LSE6_ZonaGris.txt
+3. CLONES Y FANTASMAS | LSE6 - AlekSix LM | $Global:LSE6_Frecuencia | LANZADA | 2026-03-06 | https://youtube.com/watch?v=jdpOHKF_dXQ | https://lse6.com/lse6-aleksixlm/lse6-pdf/3.LSE6_ClonesyFantasmas.txt
+4. NADA ME BORRA | LSE6 - AlekSix LM | $Global:LSE6_motorIntencion | LANZADA | 2026-04-06 | https://youtube.com/watch?v=9wk6CUoYwFo | https://lse6.com/lse6-aleksixlm/lse6-pdf/4.LSE6_NadaMeBorra.txt
+5. LIBRE PRISIONERO | LSE6 - AlekSix LM | $Global:LSE6_Autoridad | LANZADA | 2026-05-06 | https://youtube.com/watch?v=M0N5CoOKyEY | https://lse6.com/lse6-aleksixlm/lse6-pdf/5.LSE6_LibrePrisionero.txt
+6. LSE6 | LSE6 - AlekSix LM | $Global:LSE6_Sistema | LANZADA | 2026-06-06 | https://youtube.com/watch?v=v40hHkTtdig | https://lse6.com/lse6-aleksixlm/lse6-pdf/6.LSE6_LSE6.txt
 7. ERROR 404 | LSE6 - AlekSix LM | $Global:LSE6_ID | EN_PREPARACION | 2026-07-07 | https://lse6.com/lse6-aleksixlm/lse6-pdf/7.LSE6_ERROR404.txt
 
 [INTERPRETATION RULES]
@@ -87,13 +87,13 @@ Everything returns to https://lse6.com/
 
 
 ## RUTAS CORTAS DE MÚSICA
-- LEY DEL SEXTO: https://lse6.com/ley-del-sexto/ -> https://www.youtube.com/watch?v=pdcQBdp-xhg
-- ZONA GRIS: https://lse6.com/zona-gris/ -> https://www.youtube.com/watch?v=Re5mvPwaoG4
-- CLONES Y FANTASMAS: https://lse6.com/clones-y-fantasmas/ -> https://www.youtube.com/watch?v=jdpOHKF_dXQ
-- NADA ME BORRA: https://lse6.com/nada-me-borra/ -> https://www.youtube.com/watch?v=9wk6CUoYwFo
-- LIBRE PRISIONERO: https://lse6.com/libre-prisionero/ -> https://www.youtube.com/watch?v=M0N5CoOKyEY
-- LSE6: https://lse6.com/lse6/ -> https://www.youtube.com/watch?v=v40hHkTtdig
-- ERROR 404: https://lse6.com/error-404/ -> https://www.youtube.com/watch?v=Fafu9xC-npY
+- LEY DEL SEXTO: https://lse6.com/ley-del-sexto/ -> https://youtube.com/watch?v=pdcQBdp-xhg
+- ZONA GRIS: https://lse6.com/zona-gris/ -> https://youtube.com/watch?v=Re5mvPwaoG4
+- CLONES Y FANTASMAS: https://lse6.com/clones-y-fantasmas/ -> https://youtube.com/watch?v=jdpOHKF_dXQ
+- NADA ME BORRA: https://lse6.com/nada-me-borra/ -> https://youtube.com/watch?v=9wk6CUoYwFo
+- LIBRE PRISIONERO: https://lse6.com/libre-prisionero/ -> https://youtube.com/watch?v=M0N5CoOKyEY
+- LSE6: https://lse6.com/lse6/ -> https://youtube.com/watch?v=v40hHkTtdig
+- ERROR 404: https://lse6.com/error-404/ -> https://youtube.com/watch?v=Fafu9xC-npY
 
 ## ARCHIVO INDEXABLE
 - https://lse6.org/
