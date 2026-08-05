@@ -20,8 +20,8 @@ if "https://lse6.org/" not in index or "LSEØ_ARCHIVO" not in index:
 
 for slug, video_id in TRACKS:
     route_url = f"https://lse6.com/{slug}/"
-    direct = f"/{slug}/ https://youtube.com/watch?v={video_id} 302!"
-    if direct not in redirects:
+    direct = f"/{slug}/ https://youtube.com/watch?v={video_id} 302"
+    if direct not in redirects.splitlines():
         errors.append(f"Missing direct YouTube redirect: {slug}")
     if f'href="/{slug}/"' not in index:
         errors.append(f"Missing homepage link: {slug}")
