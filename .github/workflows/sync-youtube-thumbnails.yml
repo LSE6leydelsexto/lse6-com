@@ -1,0 +1,38 @@
+name: Sync YouTube thumbnails
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 12 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download official thumbnails
+        run: python tools/sync_youtube_thumbnails.py
+      - name: Validate music routes
+        run: python tools/validate_music_routes.py
+      - name: Validate inline JavaScript
+        run: python tools/validate_inline_js.py
+      - name: Commit changes
+        shell: bash
+        run: |
+          if git diff --quiet -- lse6-assets/youtube-thumbnails; then
+            echo "No thumbnail changes"
+            exit 0
+          fi
+          git config user.name "LSE6 YouTube Sync"
+          git config user.email "leydelsexto@proton.me"
+          git add lse6-assets/youtube-thumbnails
+          git commit -m "Sincroniza miniaturas oficiales de YouTube"
+          git push

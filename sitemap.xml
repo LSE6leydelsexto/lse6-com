@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- ==================== PÁGINAS PRINCIPALES ==================== -->
@@ -231,4 +231,41 @@
     <priority>0.48</priority>
   </url>
 
+
+  <!-- ==================== RUTAS CORTAS DE MÚSICA ==================== -->
+  <url>
+    <loc>https://lse6.com/ley-del-sexto/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://lse6.com/zona-gris/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://lse6.com/clones-y-fantasmas/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://lse6.com/nada-me-borra/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://lse6.com/libre-prisionero/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://lse6.com/lse6/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://lse6.com/error-404/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.96</priority>
+  </url>
 </urlset>
