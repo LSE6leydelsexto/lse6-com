@@ -39,7 +39,6 @@ User-agent: Baiduspider
 Allow: /
 User-agent: Yandex
 Allow: /
-Host: https://lse6.com
 
 # ----------------------------------------------------------------
 # INTELIGENCIA ARTIFICIAL
