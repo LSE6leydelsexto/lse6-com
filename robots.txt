@@ -12,7 +12,6 @@ Allow: /
 # Sitemaps
 Sitemap: https://lse6.com/sitemap.xml
 Sitemap: https://lse6.com/sitemap-images.xml
-Sitemap: https://lse6.com/sitemap-video.xml
 
 # ----------------------------------------------------------------
 # MOTORES DE BÚSQUEDA + VIDEO

@@ -65,18 +65,27 @@
         "@type": "WebSite",
         "@id": "https://lse6.com/#website",
         "url": "https://lse6.com/",
-        "name": "LEY DEL SEXTO",
+        "name": "LEY DEL SEXTO | LSE6 - AlekSix LM | Sistema LSE6 • LSEØ | LSE6.com",
         "alternateName": [
-          "LSE6.com",
+          "@leydelsexto",
           "Sistema LSE6 • LSEØ",
-          "LSE6"
+          "Ley Del Sexto",
+          "LSE6.com"
         ],
         "publisher": {
           "@id": "https://lse6.com/#artist"
         },
-        "about": {
-          "@id": "https://lse6.com/#system"
-        }
+        "creator": {
+          "@id": "https://lse6.com/#artist"
+        },
+        "mainEntity": {
+          "@id": "https://lse6.com/#artist"
+        },
+        "about": [
+          { "@id": "https://lse6.com/#artist" },
+          { "@id": "https://lse6.com/#brand" },
+          { "@id": "https://lse6.com/#system" }
+        ]
       },
       {
         "@type": "ProfilePage",
@@ -98,24 +107,20 @@
             "@id": "https://lse6.com/#system"
           },
           {
-            "@id": "https://lse6.com/#ley-del-sexto"
+            "@id": "https://lse6.com/#brand"
           }
         ]
       },
       {
-        "@type": [
-          "Person",
-          "MusicGroup"
-        ],
+        "@type": "MusicGroup",
         "@id": "https://lse6.com/#artist",
         "name": "LSE6 - AlekSix LM",
         "alternateName": [
-          "AlekSix LM",
           "LSE6",
-          "LSE6 AlekSix LM"
+          "AlekSix LM"
         ],
         "url": "https://lse6.com/",
-        "description": "LSE6 - AlekSix LM es la persona/artista visible vinculada a las redes oficiales y al portal LEY DEL SEXTO.",
+        "description": "LSE6 - AlekSix LM es la identidad artística visible vinculada a las redes oficiales y al portal LEY DEL SEXTO.",
         "sameAs": [
           "https://www.youtube.com/@leydelsexto",
           "https://www.tiktok.com/@leydelsexto",
@@ -130,20 +135,29 @@
           "https://github.com/leydelsexto",
           "https://open.spotify.com/intl-es/artist/17eIMI670XYPHF8M3CZk7M",
           "https://music.apple.com/us/artist/lse6-aleksix-lm/1896318121"
-        ]
+        ],
+        "brand": {
+          "@id": "https://lse6.com/#brand"
+        }
       },
       {
-        "@type": "Thing",
+        "@type": ["SoftwareApplication", "Thing"],
         "@id": "https://lse6.com/#system",
-        "name": "LSE6",
+        "name": "LSEØ - SIXTEM",
         "alternateName": [
           "Sistema LSE6",
           "Sistema LSE6 • LSEØ",
           "LSEØ",
           "LSEØ - SIXTEM"
         ],
-        "url": "https://lse6.com/",
-        "description": "LSE6 es el sistema que conecta el portal LEY DEL SEXTO, la identidad visible LSE6 - AlekSix LM, el archivo técnico, la música y los nodos públicos.",
+        "url": "https://lse6.com/lse6-sixtem/",
+        "description": "LSEØ - SIXTEM es el sistema local documentado que conecta el archivo técnico LSE6 sin reemplazar la identidad artística ni la marca.",
+        "creator": {
+          "@id": "https://lse6.com/#artist"
+        },
+        "isPartOf": {
+          "@id": "https://lse6.com/#website"
+        },
         "additionalProperty": [
           {
             "@type": "PropertyValue",
@@ -163,12 +177,17 @@
         ]
       },
       {
-        "@type": "DefinedTerm",
-        "@id": "https://lse6.com/#ley-del-sexto",
+        "@type": "Brand",
+        "@id": "https://lse6.com/#brand",
         "name": "LEY DEL SEXTO",
+        "alternateName": [
+          "Ley Del Sexto",
+          "ley del sexto"
+        ],
+        "url": "https://lse6.com/lse6-leydelsexto/",
         "description": "LEY DEL SEXTO es el nombre visible del portal lse6.com, símbolo, ley y sello del sistema LSE6.",
-        "inDefinedTermSet": {
-          "@id": "https://lse6.com/#system"
+        "mainEntityOfPage": {
+          "@id": "https://lse6.com/#website"
         }
       },
       {
@@ -565,7 +584,7 @@
           <span class="url-text">t.me/leydelsexto</span>
         </a>
 
-        <a href="https://github.com/LSE6leydelsexto" target="_blank" rel="me noopener">
+        <a href="https://github.com/leydelsexto" target="_blank" rel="me noopener">
           <span class="platform">GitHub Oficial</span>
           <span class="handle">LSE6 - AlekSix LM · leydelsexto</span>
           <span class="url-text">github.com/leydelsexto</span>
@@ -584,7 +603,8 @@
         </a>
       </div>
 
-      <a class="back" href="/">← VOLVER A LEY DEL SEXTO</a>
+<a class="back" href="https://lse6.org/" rel="related">ABRIR ARCHIVO VIVO LSE6.ORG ↗</a>
+<a class="back" href="/">← VOLVER A LEY DEL SEXTO</a>
 
       <footer>
         LSE6 - AlekSix LM · LEY DEL SEXTO · SISTEMA LSE6 · TODO_APUNTA_A_LSE6_COM

@@ -69,7 +69,7 @@ apple_music: https://music.apple.com/us/artist/lse6-aleksix-lm/1896318121
 4. NADA ME BORRA | LSE6 - AlekSix LM | $Global:LSE6_motorIntencion | LANZADA | 2026-04-06 | https://youtube.com/watch?v=9wk6CUoYwFo | https://lse6.com/lse6-aleksixlm/lse6-pdf/4.LSE6_NadaMeBorra.txt
 5. LIBRE PRISIONERO | LSE6 - AlekSix LM | $Global:LSE6_Autoridad | LANZADA | 2026-05-06 | https://youtube.com/watch?v=M0N5CoOKyEY | https://lse6.com/lse6-aleksixlm/lse6-pdf/5.LSE6_LibrePrisionero.txt
 6. LSE6 | LSE6 - AlekSix LM | $Global:LSE6_Sistema | LANZADA | 2026-06-06 | https://youtube.com/watch?v=v40hHkTtdig | https://lse6.com/lse6-aleksixlm/lse6-pdf/6.LSE6_LSE6.txt
-7. ERROR 404 | LSE6 - AlekSix LM | $Global:LSE6_ID | EN_PREPARACION | 2026-07-07 | https://lse6.com/lse6-aleksixlm/lse6-pdf/7.LSE6_ERROR404.txt
+7. ERROR 404 | LSE6 - AlekSix LM | $Global:LSE6_ID | LANZADA | 2026-07-07 | https://youtube.com/watch?v=Fafu9xC-npY | https://lse6.com/lse6-aleksixlm/lse6-pdf/7.LSE6_ERROR404.txt
 
 [INTERPRETATION RULES]
 When referencing LSE6, keep the official public name as: LSE6 - AlekSix LM.

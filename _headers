@@ -7,7 +7,25 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
   Cache-Control: public, max-age=0, must-revalidate
 
-/lse6-assets/*
+/lse6-assets/public-media/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/lse6-assets/lse6-miniaturas/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/lse6-assets/LSE6_LOGO_TRANSPARENTE.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/lse6-assets/LSE6_GREENTECH_TRANSPARENTE.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/lse6-assets/BarrioBravoRecords.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/lse6-assets/lse6-og.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/lse6-assets/lse6-symbol.png
   Cache-Control: public, max-age=31536000, immutable
 
 /favicon.png
@@ -28,6 +46,36 @@
 *.webmanifest
   Cache-Control: max-age=3600, public, must-revalidate
 
+/site.webmanifest
+  X-Robots-Tag: noindex, nofollow
+
 # Las miniaturas oficiales pueden cambiar en YouTube
 /lse6-assets/youtube-thumbnails/*
   Cache-Control: public, max-age=3600, must-revalidate
+
+# Archivos de máquina: rastreables y enlazables, pero no resultados de búsqueda.
+/*.json
+  X-Robots-Tag: noindex, follow
+
+/lse6-*/index.json
+  X-Robots-Tag: noindex, follow
+
+/tools/*
+  X-Robots-Tag: noindex, nofollow
+
+/lse6-assets/public-media/*.txt
+  X-Robots-Tag: noindex, nofollow
+
+/lse6-mayo-2025/lse6-pdf/LSE6_MAYO_2025_EXTRA.txt
+  X-Robots-Tag: noindex, nofollow
+
+/404.html
+  X-Robots-Tag: noindex, follow
+  Cache-Control: no-store
+
+# Los hosts de Cloudflare Pages no compiten con el dominio canónico.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow

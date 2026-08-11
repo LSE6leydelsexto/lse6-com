@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# Medios y documentos publicados conservan sus bytes exactos.
+*.jpeg -text
+*.jpg -text
+*.mp4 -text
+*.pdf -text
+*.png -text

@@ -1,8 +1,6 @@
-# LSE6 canonical host redirects
-http://www.lse6.com/* https://lse6.com/:splat 301!
-https://www.lse6.com/* https://lse6.com/:splat 301!
-http://lse6.com/* https://lse6.com/:splat 301!
-/lse6-aleksixlm/machine-pulse.json /machine-pulse.json 301!
+# El host canónico se consolida en Cloudflare; Pages no admite redirects por dominio aquí.
+/lse6-aleksixlm/machine-pulse.json /machine-pulse.json 301
+/favicon.ico /favicon.png 301
 
 # Rutas musicales: conservar una URL indexable propia en LSE6.com
 # Las variantes sin diagonal y con mayúsculas consolidan en la URL canónica 200.

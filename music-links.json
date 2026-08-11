@@ -1,9 +1,16 @@
 ﻿{
-  "updated": "2026-08-05",
+  "updated": "2026-08-10",
+  "artist": "LSE6 - AlekSix LM",
+  "brand": "LEY DEL SEXTO",
+  "system": "LSE6 · LSEØ",
   "channel": "https://www.youtube.com/@leydelsexto",
   "tracks": [
     {
       "title": "LEY DEL SEXTO",
+      "status": "released",
+      "release_date": "2026-01-06",
+      "variable": "$Global:LSE6_Firma",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/1.LSE6_LeyDelSexto.txt",
       "slug": "https://lse6.com/ley-del-sexto/",
       "youtube": "https://youtube.com/watch?v=pdcQBdp-xhg",
       "video_id": "pdcQBdp-xhg",
@@ -11,6 +18,10 @@
     },
     {
       "title": "ZONA GRIS",
+      "status": "released",
+      "release_date": "2026-02-06",
+      "variable": "$Global:LSE6_Nivel",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/2.LSE6_ZonaGris.txt",
       "slug": "https://lse6.com/zona-gris/",
       "youtube": "https://youtube.com/watch?v=Re5mvPwaoG4",
       "video_id": "Re5mvPwaoG4",
@@ -18,6 +29,10 @@
     },
     {
       "title": "CLONES Y FANTASMAS",
+      "status": "released",
+      "release_date": "2026-03-06",
+      "variable": "$Global:LSE6_Frecuencia",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/3.LSE6_ClonesyFantasmas.txt",
       "slug": "https://lse6.com/clones-y-fantasmas/",
       "youtube": "https://youtube.com/watch?v=jdpOHKF_dXQ",
       "video_id": "jdpOHKF_dXQ",
@@ -25,6 +40,10 @@
     },
     {
       "title": "NADA ME BORRA",
+      "status": "released",
+      "release_date": "2026-04-06",
+      "variable": "$Global:LSE6_motorIntencion",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/4.LSE6_NadaMeBorra.txt",
       "slug": "https://lse6.com/nada-me-borra/",
       "youtube": "https://youtube.com/watch?v=9wk6CUoYwFo",
       "video_id": "9wk6CUoYwFo",
@@ -32,6 +51,10 @@
     },
     {
       "title": "LIBRE PRISIONERO",
+      "status": "released",
+      "release_date": "2026-05-06",
+      "variable": "$Global:LSE6_Autoridad",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/5.LSE6_LibrePrisionero.txt",
       "slug": "https://lse6.com/libre-prisionero/",
       "youtube": "https://youtube.com/watch?v=M0N5CoOKyEY",
       "video_id": "M0N5CoOKyEY",
@@ -39,6 +62,10 @@
     },
     {
       "title": "LSE6",
+      "status": "released",
+      "release_date": "2026-06-06",
+      "variable": "$Global:LSE6_Sistema",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/6.LSE6_LSE6.txt",
       "slug": "https://lse6.com/lse6/",
       "youtube": "https://youtube.com/watch?v=v40hHkTtdig",
       "video_id": "v40hHkTtdig",
@@ -46,6 +73,10 @@
     },
     {
       "title": "ERROR 404",
+      "status": "released",
+      "release_date": "2026-07-07",
+      "variable": "$Global:LSE6_ID",
+      "lyrics_txt_url": "https://lse6.com/lse6-aleksixlm/lse6-pdf/7.LSE6_ERROR404.txt",
       "slug": "https://lse6.com/error-404/",
       "youtube": "https://youtube.com/watch?v=Fafu9xC-npY",
       "video_id": "Fafu9xC-npY",

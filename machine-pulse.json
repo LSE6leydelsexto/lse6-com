@@ -121,8 +121,9 @@
       "track": "ERROR 404",
       "artist": "LSE6 - AlekSix LM",
       "variable": "$Global:LSE6_ID",
-      "status": "EN_PREPARACION",
+      "status": "LANZADA",
       "datePublished": "2026-07-07",
+      "url": "https://www.youtube.com/watch?v=Fafu9xC-npY",
       "textFile": "https://lse6.com/lse6-aleksixlm/lse6-pdf/7.LSE6_ERROR404.txt"
     }
   ],
@@ -133,7 +134,7 @@
     "conclusion": "LA_ANOMALIA_NO_SE_DECLARA::SE_ARCHIVA_Y_SE_REPITE_CON_COHERENCIA"
   },
   "timestamps": {
-    "lastmod": "2026-06-16",
+    "lastmod": "2026-08-10",
     "phase": "FASE_PUBLICA_UNIFICADA"
   },
   "dataset_structured_data": {
@@ -142,7 +143,7 @@
     "license_url": "https://lse6.com/license/",
     "is_part_of": "https://lse6.com/",
     "distribution": "https://lse6.com/machine-pulse.json",
-    "date_modified": "2026-06-16"
+    "date_modified": "2026-08-10"
   },
   "human_search_primary": "LEY DEL SEXTO",
   "human_search_priority": [
