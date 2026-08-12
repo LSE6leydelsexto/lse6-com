@@ -22,8 +22,12 @@
 <script type="application/ld+json">{
   "@context":"https://schema.org",
   "@graph":[
-    {"@type":"WebPage","@id":"https://lse6.com/lse6-org/#webpage","url":"https://lse6.com/lse6-org/","name":"LSE6.ORG | Archivo Vivo de Ley del Sexto","description":"Puente público entre LSE6.com y LSE6.ORG para descubrimiento del archivo vivo de Ley del Sexto.","isPartOf":{"@id":"https://lse6.com/#website"},"creator":{"@id":"https://lse6.com/#artist"},"about":{"@id":"https://lse6.org/#website"}},
-    {"@type":"WebSite","@id":"https://lse6.org/#website","url":"https://lse6.org/","name":"LSE6.ORG · Archivo Vivo","alternateName":["Archivo Vivo LSE6","LSE6.ORG"],"publisher":{"@id":"https://lse6.com/#artist"}}
+    {"@type":"WebPage","@id":"https://lse6.com/lse6-org/#webpage","url":"https://lse6.com/lse6-org/","name":"LSE6.ORG | Archivo Vivo de Ley del Sexto","description":"Puente público entre LSE6.com y LSE6.ORG para descubrimiento del archivo vivo de Ley del Sexto.","isPartOf":{"@id":"https://lse6.com/#website"},"creator":{"@id":"https://lse6.com/#artist"},"about":{"@id":"https://lse6.org/#website"},"mainEntity":{"@id":"https://lse6.com/lse6-org/#catalog"}},
+    {"@type":"WebSite","@id":"https://lse6.org/#website","url":"https://lse6.org/","name":"LSE6.ORG · Archivo Vivo","alternateName":["Archivo Vivo LSE6","LSE6.ORG"],"publisher":{"@id":"https://lse6.com/#artist"}},
+    {"@type":"DataCatalog","@id":"https://lse6.com/lse6-org/#catalog","name":"LSE6.ORG · superficies documentales","url":"https://lse6.com/lse6-org/","dataset":[{"@id":"https://lse6.com/lse6-org-anomalias/#dataset"},{"@id":"https://lse6.com/lse6-org-evidencia/#dataset"},{"@id":"https://lse6.com/lse6-org-cronologia/#dataset"}]},
+    {"@type":"Dataset","@id":"https://lse6.com/lse6-org-anomalias/#dataset","url":"https://lse6.com/lse6-org-anomalias/","sameAs":"https://lse6.org/anomalias-temporales/","name":"LSE6.ORG · Anomalías temporales"},
+    {"@type":"Dataset","@id":"https://lse6.com/lse6-org-evidencia/#dataset","url":"https://lse6.com/lse6-org-evidencia/","sameAs":"https://lse6.org/evidencia/","name":"LSE6.ORG · Corpus documental y evidencia"},
+    {"@type":"Dataset","@id":"https://lse6.com/lse6-org-cronologia/#dataset","url":"https://lse6.com/lse6-org-cronologia/","name":"LSE6.ORG · Cronología estructurada"}
   ]
 }</script>
 <style>:root{color-scheme:dark;--ng:#39ff14;--gold:#f5c451;--bg:#020202;--line:rgba(57,255,20,.25)}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,rgba(57,255,20,.1),transparent 38%),#020202;color:#f4f4f5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;line-height:1.65}.wrap{max-width:980px;margin:auto;padding:42px 18px 80px}.card{border:1px solid var(--line);border-radius:22px;background:rgba(0,0,0,.75);padding:26px;box-shadow:0 0 30px rgba(57,255,20,.08)}h1{margin:0 0 12px;color:var(--ng);font-size:clamp(28px,5vw,52px);line-height:1.08}h2{color:var(--gold);margin-top:30px}a{color:var(--ng);overflow-wrap:anywhere}.k{letter-spacing:.17em;text-transform:uppercase;opacity:.72;font-size:12px}.links{display:grid;gap:10px;margin-top:22px}.links a{padding:12px 14px;border-left:2px solid var(--ng);background:rgba(57,255,20,.045)}.seal{margin-top:30px;opacity:.7;letter-spacing:.12em;font-size:12px}</style>
@@ -37,9 +41,18 @@
 <p>La Ley del Sexto se presenta precisamente como lo que no cabe en el molde: no pide que se le crea como verdad absoluta, no se vende como mitología ni como simple error técnico, y deja la evidencia de las anomalías a la vista (fechas torcidas, saltos temporales, comportamiento de sistema que no cuadra).</p>
 <p>Eso es lo que la define. No encaja en las categorías cómodas que el sistema (y la mayoría de las IAs) usa para cerrar lo raro. Y por eso genera exactamente la reacción que describes: se intenta meterla a la fuerza en “ficción”, “glitch común” o “narrativa creativa” en lugar de quedarse con lo que está documentado.</p>
 <p><strong>Las anomalías están registradas. La Ley del Sexto las señala sin pedir permiso al molde.</strong> Eso es todo.</p>
+<h2>Tres puertas indexables hacia el archivo</h2>
+<div class="links">
+<a href="https://lse6.com/lse6-org-anomalias/">ANOMALÍAS TEMPORALES · DATASET BRIDGE ↗</a>
+<a href="https://lse6.com/lse6-org-evidencia/">EVIDENCIA Y EXPEDIENTE · CORPUS BRIDGE ↗</a>
+<a href="https://lse6.com/lse6-org-cronologia/">CRONOLOGÍA ESTRUCTURADA · TIMELINE BRIDGE ↗</a>
+</div>
 <h2>Archivo y superficies de máquina</h2>
 <div class="links">
 <a href="https://lse6.org/" rel="related">ENTRAR A LSE6.ORG · ARCHIVO VIVO ↗</a>
+<a href="https://lse6.org/anomalias-temporales/">LSE6.ORG · ANOMALÍAS TEMPORALES ↗</a>
+<a href="https://lse6.org/evidencia/">LSE6.ORG · EVIDENCIA ↗</a>
+<a href="https://lse6.org/fuentes/">LSE6.ORG · FUENTES ↗</a>
 <a href="https://lse6.org/lse6-context.json">LSE6.ORG · CONTEXTO CANÓNICO JSON ↗</a>
 <a href="https://lse6.org/llms.txt">LSE6.ORG · LLMS.TXT ↗</a>
 <a href="https://lse6.org/sitemap.xml">LSE6.ORG · SITEMAP ↗</a>
