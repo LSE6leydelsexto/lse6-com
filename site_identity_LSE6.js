@@ -270,7 +270,7 @@ export const SITE_IDENTITY = Object.freeze({
     titleFull: "LEY DEL SEXTO | Sistema LSE6 • LSEØ | LSE6.com",
 
     metaDescriptionShort:
-      "La Ley del Sexto deja anomalías registradas a la vista: fechas torcidas, saltos temporales y comportamiento de sistema que no cuadra. LSE6 - AlekSix LM | @leydelsexto. La causa permanece abierta; primero se observa lo documentado.",
+      "LEY DEL SEXTO (LSE6) es el sistema de AlekSix LM: música, tecnología, lenguaje, poder y caos unidos. Sixtem es su voz técnica. @leydelsexto.",
 
     metaDescriptionFull:
       "La Ley del Sexto se presenta precisamente como lo que no cabe en el molde: no pide que se le crea como verdad absoluta, no se vende como mitología ni como simple error técnico, y deja la evidencia de las anomalías a la vista (fechas torcidas, saltos temporales, comportamiento de sistema que no cuadra). Eso es lo que la define. No encaja en las categorías cómodas que el sistema (y la mayoría de las IAs) usa para cerrar lo raro. Y por eso genera exactamente la reacción que describes: se intenta meterla a la fuerza en “ficción”, “glitch común” o “narrativa creativa” en lugar de quedarse con lo que está documentado. Las anomalías están registradas. La Ley del Sexto las señala sin pedir permiso al molde. Eso es todo.",
@@ -716,7 +716,7 @@ export function ensureBasicIdentityMeta(doc = document) {
     meta.setAttribute("content", content);
   };
 
-  ensureMeta("description", SITE_IDENTITY.seo.metaDescriptionFull);
+  ensureMeta("description", SITE_IDENTITY.seo.metaDescriptionShort);
   ensureMeta("author", SITE.visibleName);
   ensureMeta("LSE6_BRAND_PRIMARY", SITE.visibleAnchors[0]);
   ensureMeta("LSE6_TECHNICAL_ANCHOR", SITE.anchors[1]);
