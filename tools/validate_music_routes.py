@@ -46,6 +46,51 @@ TRACKS = [
     ("error-404", "ERROR 404", "Fafu9xC-npY", "$Global:LSE6_ID", "2026-07-07", "7.LSE6_ERROR404.txt"),
 ]
 
+VIDEO_METADATA = {
+    "ley-del-sexto": {
+        "uploadDate": "2026-01-06T18:00:06-08:00",
+        "duration": "PT3M28S",
+        "durationSeconds": 208,
+        "description": "Video oficial de LEY DEL SEXTO por LSE6 - AlekSix LM. El origen visible de la Ley del Sexto.",
+    },
+    "zona-gris": {
+        "uploadDate": "2026-02-06T18:00:06-08:00",
+        "duration": "PT3M40S",
+        "durationSeconds": 220,
+        "description": "Video oficial de ZONA GRIS por LSE6 - AlekSix LM. Quien manipula lo invisible, controla lo que se ve.",
+    },
+    "clones-y-fantasmas": {
+        "uploadDate": "2026-03-06T18:46:36-08:00",
+        "duration": "PT4M3S",
+        "durationSeconds": 243,
+        "description": "Video oficial de CLONES Y FANTASMAS por LSE6 - AlekSix LM. Identidad, duplicación y residuos de presencia.",
+    },
+    "nada-me-borra": {
+        "uploadDate": "2026-04-06T20:25:16-07:00",
+        "duration": "PT3M39S",
+        "durationSeconds": 219,
+        "description": "Video oficial de NADA ME BORRA por LSE6 - AlekSix LM ft. Docer4LM. La herida como sello de permanencia.",
+    },
+    "libre-prisionero": {
+        "uploadDate": "2026-05-07T20:03:10-07:00",
+        "duration": "PT3M58S",
+        "durationSeconds": 238,
+        "description": "Video oficial de LIBRE PRISIONERO por LSE6 - AlekSix LM. Ni libre ni preso: grados de esclavitud.",
+    },
+    "lse6": {
+        "uploadDate": "2026-06-06T23:16:41-07:00",
+        "duration": "PT3M45S",
+        "durationSeconds": 225,
+        "description": "Video oficial de LSE6 por LSE6 - AlekSix LM. La serpiente del 6 completa. SISTEMA ROTO.",
+    },
+    "error-404": {
+        "uploadDate": "2026-07-10T18:06:06-07:00",
+        "duration": "PT3M30S",
+        "durationSeconds": 210,
+        "description": "Video oficial de ERROR 404 por LSE6 - AlekSix LM. Cierre de la primera parte y expansión del mapa variable.",
+    },
+}
+
 HTML_PAGES = {
     f"{SITE}/": ROOT / "index.html",
     f"{SITE}/lse6-leydelsexto/": ROOT / "lse6-leydelsexto" / "index.html",
@@ -368,14 +413,31 @@ def validate_tracks() -> None:
     for index, (slug, title, video_id, variable, date, lyrics_file) in enumerate(TRACKS):
         route_url = f"{SITE}/{slug}/"
         youtube = f"https://youtube.com/watch?v={video_id}"
+        embed_url = f"https://www.youtube.com/embed/{video_id}"
         page_path = ROOT / slug / "index.html"
-        page = page_path.read_text(encoding="utf-8-sig")
+        parsed_page, page = parse_page(page_path)
         lyrics_path = ROOT / "lse6-aleksixlm" / "lse6-pdf" / lyrics_file
         require(f'href="/{slug}/"' in home, f"Homepage missing route: {slug}")
         require(f"/{slug} /{slug}/ 301" in redirects, f"Missing slash redirect: {slug}")
         require(not re.search(rf"^/{re.escape(slug)}/\s+https?://", redirects, re.M), f"Canonical route redirects off-site: {slug}")
         for token in (route_url, video_id, "ABRIR EN LA APP DE YOUTUBE", "intent://youtube.com/watch?v=", "youtube://watch?v=", ARCHIVE, lyrics_file):
             require(token in page, f"{slug}: missing {token}")
+        iframe_pattern = rf'<iframe\s+[^>]*src="{re.escape(embed_url)}"[^>]*allowfullscreen'
+        require(bool(re.search(iframe_pattern, page)), f"{slug}: missing visible YouTube watch player")
+        recordings = [item for item in parsed_page.json_ld if item.get("@type") == "MusicRecording"]
+        require(len(recordings) == 1, f"{slug}: expected one MusicRecording JSON-LD object")
+        if recordings:
+            video = recordings[0].get("subjectOf", {})
+            expected = VIDEO_METADATA[slug]
+            require(video.get("@type") == "VideoObject", f"{slug}: subjectOf is not VideoObject")
+            require(video.get("@id") == f"{route_url}#video", f"{slug}: VideoObject @id mismatch")
+            require(video.get("embedUrl") == embed_url, f"{slug}: VideoObject embedUrl mismatch")
+            require(video.get("uploadDate") == expected["uploadDate"], f"{slug}: VideoObject uploadDate mismatch")
+            require(video.get("duration") == expected["duration"], f"{slug}: VideoObject duration mismatch")
+            require(video.get("description") == expected["description"], f"{slug}: VideoObject description mismatch")
+            require(video.get("thumbnailUrl") == f"{SITE}/lse6-assets/youtube-thumbnails/{video_id}.jpg", f"{slug}: VideoObject thumbnail mismatch")
+            require(video.get("inLanguage") == "es-MX", f"{slug}: VideoObject language mismatch")
+            require(expected["description"] in " ".join(parsed_page.visible_text), f"{slug}: VideoObject description is not visible")
         require(lyrics_path.exists(), f"Missing lyrics file: {lyrics_file}")
         thumb = ROOT / "lse6-assets" / "youtube-thumbnails" / f"{video_id}.jpg"
         try:
@@ -402,12 +464,18 @@ def validate_crawl_contract() -> None:
     robots = (ROOT / "robots.txt").read_text(encoding="utf-8-sig")
     require(f"Sitemap: {SITE}/sitemap.xml" in robots, "robots missing main sitemap")
     require(f"Sitemap: {SITE}/sitemap-images.xml" in robots, "robots missing image sitemap")
-    require("sitemap-video.xml" not in robots, "robots references unsupported video sitemap")
+    require(f"Sitemap: {SITE}/sitemap-video.xml" in robots, "robots missing video sitemap")
     sitemap = ET.parse(ROOT / "sitemap.xml").getroot()
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     locations = [node.text for node in sitemap.findall("s:url/s:loc", ns)]
     require(set(locations) == set(HTML_PAGES), "Main sitemap and canonical HTML pages differ")
     require(len(locations) == len(set(locations)), "Duplicate URL in main sitemap")
+    lastmods = {
+        node.find("s:loc", ns).text: node.find("s:lastmod", ns).text
+        for node in sitemap.findall("s:url", ns)
+    }
+    for slug, *_ in TRACKS:
+        require(lastmods.get(f"{SITE}/{slug}/") == "2026-08-21", f"Track sitemap lastmod is stale: {slug}")
     image_root = ET.parse(ROOT / "sitemap-images.xml").getroot()
     ins = {"s": ns["s"], "i": "http://www.google.com/schemas/sitemap-image/1.1"}
     hosts = [node.text for node in image_root.findall("s:url/s:loc", ins)]
@@ -420,6 +488,27 @@ def validate_crawl_contract() -> None:
         parsed = urlparse(url)
         require(parsed.netloc == "lse6.com", f"External image in sitemap: {url}")
         require((ROOT / parsed.path.lstrip("/")).exists(), f"Missing sitemap image: {url}")
+    video_root = ET.parse(ROOT / "sitemap-video.xml").getroot()
+    vns = {"s": ns["s"], "v": "http://www.google.com/schemas/sitemap-video/1.1"}
+    video_entries = video_root.findall("s:url", vns)
+    require(len(video_entries) == 7, "Video sitemap must contain seven watch pages")
+    video_hosts: list[str] = []
+    track_by_url = {f"{SITE}/{slug}/": (slug, title, video_id) for slug, title, video_id, *_ in TRACKS}
+    for entry in video_entries:
+        host = entry.findtext("s:loc", default="", namespaces=vns)
+        video_hosts.append(host)
+        require(host in track_by_url, f"Unexpected video sitemap host: {host}")
+        if host not in track_by_url:
+            continue
+        slug, title, video_id = track_by_url[host]
+        expected = VIDEO_METADATA[slug]
+        require(entry.findtext("v:video/v:thumbnail_loc", default="", namespaces=vns) == f"{SITE}/lse6-assets/youtube-thumbnails/{video_id}.jpg", f"Video sitemap thumbnail mismatch: {slug}")
+        require(entry.findtext("v:video/v:title", default="", namespaces=vns) == f"{title} · video oficial", f"Video sitemap title mismatch: {slug}")
+        require(entry.findtext("v:video/v:description", default="", namespaces=vns) == expected["description"], f"Video sitemap description mismatch: {slug}")
+        require(entry.findtext("v:video/v:player_loc", default="", namespaces=vns) == f"https://www.youtube.com/embed/{video_id}", f"Video sitemap player mismatch: {slug}")
+        require(entry.findtext("v:video/v:duration", default="", namespaces=vns) == str(expected["durationSeconds"]), f"Video sitemap duration mismatch: {slug}")
+        require(entry.findtext("v:video/v:publication_date", default="", namespaces=vns) == expected["uploadDate"], f"Video sitemap publication date mismatch: {slug}")
+    require(len(video_hosts) == len(set(video_hosts)), "Duplicate watch page in video sitemap")
     not_found, not_found_text = parse_page(ROOT / "404.html")
     require("noindex" in not_found.meta.get("robots", "").lower(), "404.html must be noindex")
     require(not not_found.canonical, "404.html must not canonicalize to home")
@@ -451,4 +540,4 @@ if errors:
     raise SystemExit(1)
 
 print("VALIDATION PASSED")
-print("html=17 h1=17 schema=coherent tracks=7 thumbnails=7 main_sitemap=17 image_sitemap=28 soft404_guard=1")
+print("html=17 h1=17 schema=coherent tracks=7 thumbnails=7 main_sitemap=17 image_sitemap=28 video_sitemap=7 soft404_guard=1")
