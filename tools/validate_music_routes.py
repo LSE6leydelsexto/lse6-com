@@ -115,6 +115,7 @@ class PageParser(HTMLParser):
         self.meta: dict[str, str] = {}
         self.canonical: list[str] = []
         self.anchors: list[str] = []
+        self.image_alts: list[str] = []
         self.json_ld: list[dict] = []
         self._json_parts: list[str] | None = None
         self.visible_text: list[str] = []
@@ -139,6 +140,8 @@ class PageParser(HTMLParser):
                 self.canonical.append(data.get("href", ""))
         elif tag == "a":
             self.anchors.append(data.get("href", ""))
+        elif tag == "img":
+            self.image_alts.append(data.get("alt", ""))
         elif tag == "script" and data.get("type", "").lower() == "application/ld+json":
             self._json_parts = []
 
@@ -219,6 +222,11 @@ def validate_html_surface() -> None:
         require(page.h1 == 1, f"Expected one H1: {path.relative_to(ROOT)} got {page.h1}")
         require(bool(page.title.strip()), f"Missing title: {path.relative_to(ROOT)}")
         require(bool(page.meta.get("description")), f"Missing description: {path.relative_to(ROOT)}")
+        if canonical == f"{SITE}/":
+            description_length = len(page.meta.get("description", ""))
+            require(25 <= description_length <= 160, f"Home description length outside Bing range: {description_length}")
+            require(bool(page.image_alts), "Home has no image alt inventory")
+            require(all(alt.strip() for alt in page.image_alts), "Home has a missing or empty image alt")
         require("noindex" not in page.meta.get("robots", "").lower(), f"Accidental noindex: {path.relative_to(ROOT)}")
         for key in ("og:title", "og:description", "og:url", "og:image", "twitter:card", "twitter:title", "twitter:description", "twitter:image"):
             require(bool(page.meta.get(key)), f"Missing {key}: {path.relative_to(ROOT)}")
