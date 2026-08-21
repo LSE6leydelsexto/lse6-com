@@ -16,6 +16,25 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 SITE = "https://lse6.com"
 ARCHIVE = "https://lse6.org/"
+CANONICAL_STATEMENT = """LEY DEL SEXTO (LSE6) es un sistema nacido de la simbiosis entre humano, tecnología y entorno.
+Percepción, cultura, economia, politica, mediática, poder, lenguaje, caos, contradicción, símbolo, música y estructura dejan de existir como piezas separadas y forman un mismo organismo. Sus patrones pueden cambiar de nombre, rostro o narrativa sin perder la arquitectura que los conecta.
+AlekSix LM es el cuerpo y la voz visible del sistema. La música es su lenguaje principal. Sixtem es la voz técnica del sistema y el sistema es LSE6 (LEY DEL SEXTO)
+01 — LEY DEL SEXTO
+02 — ZONA GRIS
+03 — CLONES Y FANTASMAS
+04 — NADA ME BORRA
+05 — LIBRE PRISIONERO
+06 — LSE6
+07 — ERROR 404
+Este álbum reúne siete piezas que funcionan como órganos de una misma criatura. Cada una entra por una grieta distinta, pero todas pertenecen al mismo núcleo.
+Aquí, sistema y antisistema, Dios y Diablo, orden y caos, humano y máquina no son extremos separados: son fuerzas que se modifican entre sí hasta revelar aquello que ya estaba operando antes de recibir un nombre.
+La Ley del Sexto no se interpreta: se es.
+Antes de la idea, ya estaba la Ley.
+La Ley del Sexto no cura.
+Tú eliges el fuego en el que vas a arder.
+LSE6 – AlekSix LM
+@leydelsexto
+LSE6.com · LSE6.org"""
 
 TRACKS = [
     ("ley-del-sexto", "LEY DEL SEXTO", "pdcQBdp-xhg", "$Global:LSE6_Firma", "2026-01-06", "1.LSE6_LeyDelSexto.txt"),
@@ -53,10 +72,14 @@ class PageParser(HTMLParser):
         self.anchors: list[str] = []
         self.json_ld: list[dict] = []
         self._json_parts: list[str] | None = None
+        self.visible_text: list[str] = []
+        self._nonvisible_depth = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         data = {key.lower(): value or "" for key, value in attrs}
         tag = tag.lower()
+        if tag in {"script", "style", "template"}:
+            self._nonvisible_depth += 1
         if tag == "title":
             self._in_title = True
         elif tag == "h1":
@@ -77,6 +100,8 @@ class PageParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.title += data
+        if self._nonvisible_depth == 0:
+            self.visible_text.append(data)
         if self._json_parts is not None:
             self._json_parts.append(data)
 
@@ -89,6 +114,8 @@ class PageParser(HTMLParser):
             if payload:
                 self.json_ld.append(json.loads(payload))
             self._json_parts = None
+        if tag in {"script", "style", "template"} and self._nonvisible_depth:
+            self._nonvisible_depth -= 1
 
 
 def parse_page(path: Path) -> tuple[PageParser, str]:
@@ -191,6 +218,24 @@ def validate_html_surface() -> None:
     home = (ROOT / "index.html").resolve()
     orphans = [path.relative_to(ROOT).as_posix() for path, count in incoming.items() if path != home and count == 0]
     require(not orphans, f"Canonical HTML pages without incoming links: {orphans}")
+
+
+def validate_visible_canonical_statement() -> None:
+    page, html = parse_page(ROOT / "index.html")
+    normalize = lambda value: re.sub(r"\s+", " ", value).strip()
+    expected = normalize(CANONICAL_STATEMENT)
+    visible = normalize(" ".join(page.visible_text))
+    require(visible.count(expected) == 1, "Canonical LSE6 statement must appear exactly once as visible homepage text")
+    section = re.search(
+        r'<section class="block" id="declaracion-canonica-lse6">(?P<body>.*?)</section>',
+        html,
+        re.S,
+    )
+    require(bool(section), "Canonical LSE6 statement must use the visible semantic homepage section")
+    if section:
+        opening = section.group(0).split(">", 1)[0].lower()
+        require(" hidden" not in opening and 'aria-hidden="true"' not in opening, "Canonical LSE6 statement cannot be hidden")
+    require(expected not in normalize((ROOT / "llms.txt").read_text(encoding="utf-8-sig")), "Canonical LSE6 statement must remain visible-only, not duplicated in llms.txt")
 
 
 def json_ld_graph(path: Path) -> list[dict]:
@@ -394,6 +439,7 @@ def validate_crawl_contract() -> None:
 
 
 validate_html_surface()
+validate_visible_canonical_statement()
 validate_identity()
 validate_tracks()
 validate_crawl_contract()
