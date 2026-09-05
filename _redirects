@@ -20,3 +20,6 @@
 /Error-404 /error-404/ 301
 
 # YouTube permanece enlazado desde cada página; no se fuerza salida 302.
+/mandela /mandela/ 301
+/MANDELA /mandela/ 301
+/Mandela /mandela/ 301

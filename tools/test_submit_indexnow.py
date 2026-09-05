@@ -13,9 +13,10 @@ SPEC.loader.exec_module(INDEXNOW)
 class IndexNowTests(unittest.TestCase):
     def test_current_sitemaps_have_expected_canonical_urls(self):
         urls = INDEXNOW.current_urls()
-        self.assertEqual(21, len(urls))
+        self.assertEqual(22, len(urls))
         self.assertIn("https://lse6.com/", urls)
         self.assertIn("https://lse6.com/lse6-org-evidencia/", urls)
+        self.assertIn("https://lse6.com/mandela/", urls)
 
     def test_single_canonical_page_change_is_targeted(self):
         active = INDEXNOW.current_urls()

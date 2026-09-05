@@ -79,3 +79,15 @@ https://:project.pages.dev/*
 
 https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex, nofollow
+
+# MANDELA: landing y documento maestro indexables; JSON sigue machine-only por regla global.
+/mandela/
+  X-Robots-Tag: index, follow, max-snippet:-1, max-image-preview:large
+
+/mandela/LSE6_EXPEDIENTE_MANDELA_LEY_TEMPORAL_V2_BLINDADO.pdf
+  X-Robots-Tag: index, follow, max-snippet:-1
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/mandela/LSE6_EXPEDIENTE_MANDELA_LEY_TEMPORAL_V2_BLINDADO.txt
+  X-Robots-Tag: index, follow, max-snippet:-1
+  Cache-Control: public, max-age=3600, must-revalidate

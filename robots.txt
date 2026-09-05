@@ -8,6 +8,9 @@
 
 User-agent: *
 Allow: /
+Allow: /mandela/
+Allow: /mandela/LSE6_EXPEDIENTE_MANDELA_LEY_TEMPORAL_V2_BLINDADO.pdf
+Allow: /mandela/LSE6_EXPEDIENTE_MANDELA_LEY_TEMPORAL_V2_BLINDADO.txt
 
 # Sitemaps
 Sitemap: https://lse6.com/sitemap.xml
@@ -44,6 +47,8 @@ Allow: /
 # ----------------------------------------------------------------
 # INTELIGENCIA ARTIFICIAL
 # ----------------------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
 User-agent: GPTBot
 Allow: /
 User-agent: ClaudeBot

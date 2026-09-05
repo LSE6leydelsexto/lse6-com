@@ -1,4 +1,4 @@
-﻿// site_identity_LSE6.js
+// site_identity_LSE6.js
 // ============================================================
 // 6🐍🔥👁️ L S E Ø 👁️🔥🐍6
 // 6🐍🔥👁️ L S E 6 👁️🔥🐍6
@@ -87,6 +87,9 @@ export const SITE_IDENTITY = Object.freeze({
   urls: Object.freeze({
     primary: "https://lse6.com/",
     archive: "https://lse6.org/",
+    mandela: "https://lse6.com/mandela/",
+    mandelaPdf: "https://lse6.com/mandela/LSE6_EXPEDIENTE_MANDELA_LEY_TEMPORAL_V2_BLINDADO.pdf",
+    mandelaMachine: "https://lse6.com/mandela/index.json",
     sistemaLSE6: "https://lse6.org/",
 
     youtube: "https://www.youtube.com/@leydelsexto",
@@ -123,6 +126,13 @@ export const SITE_IDENTITY = Object.freeze({
       "666",
       "Zona Gris",
       "zona gris",
+      "MANDELA",
+      "Efecto Mandela",
+      "Ley de Tránsito entre Continuidades Temporales",
+      "líneas temporales",
+      "anomalías temporales",
+      "31/12/69",
+      "01/01/70",
       "Percepción",
       "percepcion",
       "antisistema",
@@ -318,6 +328,7 @@ export const SITE_IDENTITY = Object.freeze({
     law: "./lse6-leydelsexto/",
     artist: "./lse6-aleksixlm/",
     origin: "./lse6-mayo-2025/",
+    mandela: "./mandela/",
     assets: "./lse6-assets/",
   }),
 

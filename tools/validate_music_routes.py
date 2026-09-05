@@ -99,6 +99,7 @@ HTML_PAGES = {
     f"{SITE}/lse6-zona-gris/": ROOT / "lse6-zona-gris" / "index.html",
     f"{SITE}/lse6-mayo-2025/": ROOT / "lse6-mayo-2025" / "index.html",
     f"{SITE}/lse6-sixtem/": ROOT / "lse6-sixtem" / "index.html",
+    f"{SITE}/mandela/": ROOT / "mandela" / "index.html",
     f"{SITE}/ontology/SystemAnomaly/": ROOT / "ontology" / "SystemAnomaly" / "index.html",
     f"{SITE}/ontology/LocalDocumentedSystem/": ROOT / "ontology" / "LocalDocumentedSystem" / "index.html",
     f"{SITE}/license/": ROOT / "license" / "index.html",
@@ -548,4 +549,4 @@ if errors:
     raise SystemExit(1)
 
 print("VALIDATION PASSED")
-print("html=17 h1=17 schema=coherent tracks=7 thumbnails=7 main_sitemap=17 image_sitemap=28 video_sitemap=7 soft404_guard=1")
+print("html=18 h1=18 schema=coherent tracks=7 thumbnails=7 main_sitemap=18 image_sitemap=28 video_sitemap=7 soft404_guard=1")
